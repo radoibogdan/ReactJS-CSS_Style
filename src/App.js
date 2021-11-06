@@ -12,6 +12,9 @@ const App = () => {
 
   const addGoalHandler = enteredText => {
     setCourseGoals(prevGoals => {
+      // Copy prevGoals to const, can also use this.
+      // prevGoals.slice()
+      // JSON.parse(JSON.stringify(prevGoals))
       const updatedGoals = [...prevGoals];
       updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
       return updatedGoals;
